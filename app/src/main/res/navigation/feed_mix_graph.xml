@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_mix_graph.xml"
+    app:startDestination="@id/batchManagerLoadingSplashFragment">
+
+    <fragment
+        android:id="@+id/batchManagerLoadingSplashFragment"
+        android:name="com.managerbatching.batchmanager.ui.pres.ui.BatchManagerLoadingSplashFragment"
+        android:label="BatchManagerLoadingSplashFragment" >
+        <action
+            android:id="@+id/action_batchManagerLoadingSplashFragment_to_batchManagerMainApplicationV"
+            app:destination="@id/batchManagerMainApplicationV" />
+    </fragment>
+    <fragment
+        android:id="@+id/batchManagerMainApplicationV"
+        android:name="com.managerbatching.batchmanager.ui.pres.views.BatchManagerMainApplicationV"
+        android:label="BatchManagerMainApplicationV" />
+</navigation>

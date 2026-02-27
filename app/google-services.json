@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563036426418",
+    "project_id": "batchmanager-61dd4",
+    "storage_bucket": "batchmanager-61dd4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563036426418:android:24698075b4db4fadd339ab",
+        "android_client_info": {
+          "package_name": "com.managerbatching.batchmanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8EJ-Pwb5SprI0A26e-xvvvUHwmZq7Hyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
