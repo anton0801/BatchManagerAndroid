@@ -40,6 +40,8 @@ fun DashboardScreen(
     val pending by viewModel.pendingBatches.collectAsState()
     val completed by viewModel.completedBatches.collectAsState()
 
+    val context = androidx.compose.ui.platform.LocalContext.current
+
     Scaffold(
         containerColor = BackgroundYellow,
         floatingActionButton = {
@@ -127,6 +129,44 @@ fun DashboardScreen(
                         onClick = { onBatchClick(batch.id) },
                         modifier = Modifier.padding(horizontal = 20.dp, vertical = 6.dp)
                     )
+                }
+            }
+
+            item {
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .background(
+                            Brush.verticalGradient(listOf(CreamPanel, BackgroundYellow))
+                        )
+                        .padding(24.dp)
+                ) {
+                    Column {
+                        Text("🥚 Batch Manager", fontFamily = NunitoFont, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = TextBrown)
+                        Text(
+                            SimpleDateFormat("EEEE, MMMM d", Locale.getDefault()).format(Date()),
+                            fontFamily = NunitoFont, fontSize = 14.sp, color = TextBrownSoft
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        TextButton(
+                            onClick = {
+                                val intent = android.content.Intent(
+                                    android.content.Intent.ACTION_VIEW,
+                                    android.net.Uri.parse("https://battchmanager.com/privacy-policy.html")
+                                )
+                                context.startActivity(intent)
+                            },
+                            contentPadding = PaddingValues(horizontal = 0.dp, vertical = 0.dp)
+                        ) {
+                            Text(
+                                "🔒 Privacy Policy",
+                                fontFamily = NunitoFont,
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 13.sp,
+                                color = TextBrownSoft
+                            )
+                        }
+                    }
                 }
             }
         }
