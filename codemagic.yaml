@@ -3,7 +3,7 @@ workflows:
     name: Android release workflow
     environment:
       android_signing:
-        - batch_manger_keystore
+        - batch_manager_keystore
       vars:
         PACKAGE_NAME: "com.managerbatching.batchmanager"
         CODENAME_SIGNING_ENABLED: "true"
